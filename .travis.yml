@@ -6,4 +6,4 @@ before_install:
   - docker build -t ttanebatesdocker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run ttanebatesdocker/docker-react npm run test -- --ci
+  - docker run -e CI=true ttanebatesdocker/docker-react npm run test
